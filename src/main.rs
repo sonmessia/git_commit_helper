@@ -429,7 +429,7 @@ impl App {
                 Constraint::Min(0),    // Main content
                 Constraint::Length(1), // Status bar
             ])
-            .split(f.size());
+            .split(f.area());
 
         self.render_header(f, chunks[0]);
         
@@ -550,10 +550,10 @@ impl App {
         f.render_widget(input, chunks[1]);
 
         // Set cursor position
-        f.set_cursor(
+        f.set_cursor_position((
             chunks[1].x + self.cursor_position as u16 + 1,
             chunks[1].y + 1,
-        );
+        ));
     }
 
     fn render_help(&self, f: &mut Frame, area: Rect) {
@@ -605,9 +605,9 @@ impl App {
 
     fn render_notification(&self, f: &mut Frame, message: &str) {
         let area = Rect {
-            x: f.size().width / 4,
-            y: f.size().height / 2,
-            width: f.size().width / 2,
+            x: f.area().width / 4,
+            y: f.area().height / 2,
+            width: f.area().width / 2,
             height: 3,
         };
 
