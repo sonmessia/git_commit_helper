@@ -2,7 +2,7 @@
 
 A fast, intuitive terminal-based user interface for managing Git commits. Never struggle with complex Git commands again – stage files, review diffs, write commits, and push changes all from one beautiful interface.
 
-![Git Commit Helper Screenshot](https://via.placeholder.com/800x500/2d3748/ffffff?text=Git+Commit+Helper+TUI)
+![Git Commit Helper Screenshot](./images/gch_demo.png)
 
 ## 🚀 Features
 
